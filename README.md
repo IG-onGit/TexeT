@@ -1,7 +1,7 @@
-# TexeT v1.0.0
+# TexeT v1.0.1
 
 **Project**: TexeT
-<br>**Version**: 1.0.0
+<br>**Version**: 1.0.1
 <br>**OS**: OS Independent
 <br>**Author**: Irakli Gzirishvili
 <br>**Mail**: gziraklirex@gmail.com
@@ -29,6 +29,7 @@ If you are using a keyboard often, these keyboard shortcuts should not be a prob
 
 - `Ctrl + Alt + t` - Translate the selected editable text by appending e.g. "/en" to the end
 - `Ctrl + Alt + r` - Read the selected text aloud
+- `Ctrl + Shift + Alt + r` - Stop reading the selected text aloud
 - `Ctrl + Alt + w` - Listen and write the text in the editable zone
 - `Ctrl + Alt + c` - Listen and write the code in the editable zone
 - `Ctrl + Alt + f` - Fix the selected text with grammar in the editable zone

@@ -11,11 +11,13 @@ class index:
         self.sysdir = self.__loadSysDir("texet")
         self.keyfile = f"{self.sysdir}/key"
         self.key = cli.read(self.keyfile)
+        self.current_proc = None
         self.sounds = True
         pass
 
     def __exit__(self):
-        # ...
+        if self.current_proc:
+            self.__stopSpeak()
         pass
 
     ####################################################################################// Main
@@ -65,7 +67,15 @@ class index:
         if not content:
             return False
 
-        cli.speak(content, 150, 0)
+        self.sounds = False
+        self.__speak(content, 150, 0)
+
+        return True
+
+    def stopReadingText(self, task: str, returns: str):
+        if self.current_proc:
+            self.sounds = False
+            self.__stopSpeak()
 
         return True
 
@@ -253,6 +263,39 @@ class index:
     def __space(self, text: str):
         return text[: len(text) - len(text.lstrip())]
 
+    def __speak(self, text="", speed=150, voice=0):
+        file = self.app + f"/.system/modules/speak.py"
+        if not cli.isFile(file):
+            return False
+
+        if self.current_proc:
+            self.__stopSpeak()
+
+        cmd = [sys.executable, file, text, str(speed), str(voice)]
+        popen_kwargs = {"stdout": subprocess.DEVNULL, "stderr": subprocess.DEVNULL}
+
+        if os.name != "nt":
+            popen_kwargs["start_new_session"] = True
+
+        cli.trace("Starting new speaker")
+        self.current_proc = subprocess.Popen(cmd, **popen_kwargs)
+
+        return True
+
+    def __stopSpeak(self):
+        cli.trace("Terminating running speaker")
+        if self.current_proc.poll() is not None:
+            return
+
+        self.current_proc.terminate()
+        try:
+            self.current_proc.wait(timeout=0.2)
+        except subprocess.TimeoutExpired:
+            self.current_proc.kill()
+            self.current_proc.wait()
+
+        return True
+
     def __shortcuts(self):
         return {
             "translateText": {
@@ -264,6 +307,12 @@ class index:
             "readText": {
                 "desc": "Read the selected text aloud",
                 "key": "ctrl+alt+r",
+                "task": "",
+                "returns": "",
+            },
+            "stopReadingText": {
+                "desc": "Stop reading the selected text aloud",
+                "key": "ctrl+shift+alt+r",
                 "task": "",
                 "returns": "",
             },
