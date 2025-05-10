@@ -1,7 +1,7 @@
-# TexeT v1.0.2
+# TexeT v1.0.3
 
 **Project**: TexeT
-<br>**Version**: 1.0.2
+<br>**Version**: 1.0.3
 <br>**OS**: OS Independent
 <br>**Author**: Irakli Gzirishvili
 <br>**Mail**: gziraklirex@gmail.com

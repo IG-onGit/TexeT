@@ -122,7 +122,13 @@ class index:
             return False
 
         content = self.__copy()
-        command = cli.listen()
+        hinted = " >> " in content
+        command = (
+            cli.listen()
+            if not hinted
+            else 'Implement logic specified in comments beginning with " >> ", and remove that comments'
+        )
+
         if not content.strip() or not command:
             cli.error("Select the code sample and ask what needs to be fixed")
             return False
@@ -338,7 +344,7 @@ class index:
                 "desc": "Fix the selected code",
                 "key": "ctrl+shift+alt+f",
                 "task": "Keep or improve the given code sample, ensuring that the spacing of the code body remains unchanged.",
-                "returns": "CODE block with relevant format",
+                "returns": "CODE block with relevant format and same spacing",
             },
             "addVersions": {
                 "desc": "Add versions of the selected content",
