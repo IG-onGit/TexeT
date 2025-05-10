@@ -337,7 +337,7 @@ class index:
             "fixCode": {
                 "desc": "Fix the selected code",
                 "key": "ctrl+shift+alt+f",
-                "task": "Fix given code sample while keeping the same spacing of the code body.",
+                "task": "Keep or improve the given code sample, ensuring that the spacing of the code body remains unchanged.",
                 "returns": "CODE block with relevant format",
             },
             "addVersions": {
