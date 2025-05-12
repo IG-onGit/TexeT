@@ -87,6 +87,15 @@ class index:
 
         return self.__paste(" " + content)
 
+    def parseText(self, task: str, returns: str):
+        content = self.__copy().strip()
+        if not content:
+            return False
+
+        parsed = AI.content(content).text() or content
+
+        return self.__paste(parsed)
+
     def writeCode(self, task: str, returns: str):
         if not self.key:
             cli.error("You need to set up your OpenAI API key to continue")
@@ -325,6 +334,12 @@ class index:
             "writeText": {
                 "desc": "Listen and transcribe the text",
                 "key": "ctrl+alt+w",
+                "task": "",
+                "returns": "",
+            },
+            "parseText": {
+                "desc": "Parse the selected text for unusual characters.",
+                "key": "ctrl+alt+p",
                 "task": "",
                 "returns": "",
             },

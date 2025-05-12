@@ -48,6 +48,9 @@ class AI:
 
         return AI(result)
 
+    def content(content: str):
+        return AI(content)
+
     ####################################################################################// Actions
     def full(self):
         return self.content
