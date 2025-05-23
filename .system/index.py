@@ -87,6 +87,21 @@ class index:
 
         return self.__paste(" " + content)
 
+    def writeFixedText(self, task: str, returns: str):
+        if not self.key:
+            cli.error("You need to set up your OpenAI API key to continue")
+            return False
+
+        self.sounds = False
+        content = cli.listen()
+        if not content:
+            return False
+
+        task += " Below is my text that you must fix:\n\n" + content
+        text = AI.response(self.key, task, returns).text() or text
+
+        return self.__paste(" " + text)
+
     def parseText(self, task: str, returns: str):
         content = self.__copy().strip()
         if not content:
@@ -336,6 +351,12 @@ class index:
                 "key": "ctrl+alt+w",
                 "task": "",
                 "returns": "",
+            },
+            "writeFixedText": {
+                "desc": "Listen, transcribe and fix the text with grammar",
+                "key": "ctrl+shift+alt+w",
+                "task": "Fix given text with grammar without changing the context.",
+                "returns": "TXT format block of fixed text",
             },
             "parseText": {
                 "desc": "Parse the selected text for unusual characters.",
