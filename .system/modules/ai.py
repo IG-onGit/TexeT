@@ -107,6 +107,7 @@ class AI:
 
     def __loadCharacters(self):
         return {
+            "–": "-",
             "—": "-",
             "“": '"',
             "”": '"',
