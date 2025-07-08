@@ -1,7 +1,7 @@
-# TexeT v1.2.0
+# TexeT v1.3.0
 
 **Project**: TexeT
-<br>**Version**: 1.2.0
+<br>**Version**: 1.3.0
 <br>**OS**: OS Independent
 <br>**Author**: Irakli Gzirishvili
 <br>**Mail**: gziraklirex@gmail.com
@@ -35,7 +35,7 @@ If you are using a keyboard often, these keyboard shortcuts should not be a prob
 - `Ctrl + Alt + p` - Parse the selected text for unusual characters
 - `Ctrl + Alt + c` - Listen and write the code in the editable zone
 - `Ctrl + Alt + f` - Fix the selected text with grammar in the editable zone
-- `Ctrl + Shift + alt + f` - Fix the selected code in the editable zone
+- `Ctrl + Shift + alt + f` - Fix the selected code in the editable zone. To make it based on comments, use ">>" at the beginning of those comments
 - `Ctrl + Alt + v` - Add versions of the selected content in the editable zone
 - `Ctrl + Alt + a` - Generate reply to the selected text message, then press `Ctrl+v` to pase it in the editable zone
 - `Ctrl + c` - Shut the TexeT system down

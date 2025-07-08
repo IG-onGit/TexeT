@@ -3,14 +3,16 @@ from imports import *
 
 class AI:
     ####################################################################################// Load
-    def __init__(self, content: str):
-        self.content = content
+    def __init__(self, key: str):
+        self.client = OpenAI(api_key=key)
         self.extensions = self.__loadExtensions()
         self.characters = self.__loadCharacters()
+        self.content = ""
         pass
 
     ####################################################################################// Main
-    def response(key: str, task: str, returns: str):
+    def response(self, task: str, returns: str):
+        self.content = ""
         chat = [
             {
                 "role": "system",
@@ -24,32 +26,29 @@ class AI:
 
         try:
             cli.trace("Sending AI request ...")
-            openai.api_key = key
-            response = openai.ChatCompletion.create(model="gpt-4o", messages=chat)
-        except openai.error.OpenAIError as e:
-            cli.error(f"AI system error: {str(e)}")
-            return ""
-        except openai.error.RateLimitError as e:
-            cli.error(f"AI rate limit error: {str(e)}")
-            return ""
-        except openai.error.InvalidRequestError as e:
-            cli.error(f"AI invalid request error: {str(e)}")
-            return ""
-        except openai.error.AuthenticationError as e:
-            cli.error(f"AI authentication error: {str(e)}")
-            return ""
+            response = self.client.responses.create(model="gpt-4o", input=chat)
+        except openai.APIConnectionError as e:
+            alert = f"Detected an AI connection error: {str(e)}"
+        except openai.APITimeoutError as e:
+            alert = f"Detected an AI timeout: {str(e)}"
+        except openai.RateLimitError as e:
+            alert = f"Detected AI rate limit error: {str(e)}"
+        except openai.BadRequestError as e:
+            alert = f"Detected an AI invalid request error: {str(e)}"
+        except openai.AuthenticationError as e:
+            alert = f"Detected AI authentication error: {str(e)}"
         except Exception as e:
             cli.error(f"Error: {str(e)}")
             return ""
 
-        result = ""
-        for choice in response.choices:
-            result += choice.message.content
+        self.content = response.output_text
 
-        return AI(result)
+        return self
 
-    def content(content: str):
-        return AI(content)
+    def parse(self, content: str):
+        self.content = content
+
+        return self
 
     ####################################################################################// Actions
     def full(self):

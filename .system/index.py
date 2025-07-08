@@ -13,6 +13,7 @@ class index:
         self.key = cli.read(self.keyfile)
         self.current_proc = None
         self.sounds = True
+        self.aiclass = AI(self.key)
         pass
 
     def __exit__(self):
@@ -98,7 +99,7 @@ class index:
             return False
 
         task += " Below is my text that you must fix:\n\n" + content
-        text = AI.response(self.key, task, returns).text() or text
+        text = self.aiclass.response(task, returns).text() or text
 
         return self.__paste(" " + text)
 
@@ -107,7 +108,7 @@ class index:
         if not content:
             return False
 
-        parsed = AI.content(content).text() or content
+        parsed = self.aiclass.parse(content).text() or content
 
         return self.__paste(parsed)
 
@@ -122,7 +123,7 @@ class index:
 
         cli.trace(f"Me: " + command)
         task += f" Now, {command}"
-        code = AI.response(self.key, task, returns).code().strip() or ""
+        code = self.aiclass.response(task, returns).code().strip() or ""
 
         return self.__paste(code)
 
@@ -136,7 +137,7 @@ class index:
             return False
 
         task += " Below is my text that you must fix:\n\n" + content
-        text = AI.response(self.key, task, returns).text() or text
+        text = self.aiclass.response(task, returns).text() or text
 
         return self.__paste(text)
 
@@ -159,7 +160,7 @@ class index:
 
         cli.trace(f"Me: " + command)
         task += f" {command}, this is my code:\n\n" + content
-        code = AI.response(self.key, task, returns).code().strip() or content
+        code = self.aiclass.response(task, returns).code().strip() or content
 
         return self.__paste(code)
 
@@ -173,7 +174,7 @@ class index:
             return False
 
         task += " This is my content:\n\n" + content
-        text = AI.response(self.key, task, returns).text().strip() or text
+        text = self.aiclass.response(task, returns).text().strip() or text
         space = self.__space(content)
 
         return self.__paste(space + text)
@@ -188,7 +189,7 @@ class index:
             return False
 
         task += " Below is a given sample message:\n\n" + content
-        text = AI.response(self.key, task, returns).text().strip() or text
+        text = self.aiclass.response(task, returns).text().strip() or text
         pyperclip.copy(text)
 
         return True
