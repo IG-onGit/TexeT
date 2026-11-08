@@ -1,0 +1,149 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Install, Commands &amp; Keyboard Shortcuts Docs | TexeT</title>
+<meta name="description" content="TexeT documentation: install the Python CLI with pip, set your OpenAI key, and learn every command and keyboard shortcut for voice typing, translation, fixes.">
+<meta name="keywords" content="TexeT, Python CLI, keyboard shortcuts, voice typing, text to speech, translate text, grammar fixer, OpenAI, pip install texet, productivity tool, open source">
+<meta name="author" content="Irakli Gzirishvili">
+<meta name="robots" content="index, follow, max-image-preview:large">
+<meta name="theme-color" content="#071420">
+<link rel="canonical" href="https://ig-ongit.github.io/TexeT/docs/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="TexeT">
+<meta property="og:title" content="Install, Commands &amp; Keyboard Shortcuts Docs | TexeT">
+<meta property="og:description" content="TexeT documentation: install the Python CLI with pip, set your OpenAI key, and learn every command and keyboard shortcut for voice typing, translation, fixes.">
+<meta property="og:url" content="https://ig-ongit.github.io/TexeT/docs/">
+<meta property="og:image" content="https://ig-ongit.github.io/TexeT/assets/github.png">
+<meta property="og:image:width" content="1280">
+<meta property="og:image:height" content="640">
+<meta property="og:image:alt" content="TexeT: Voice, AI and translation on keyboard shortcuts">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Install, Commands &amp; Keyboard Shortcuts Docs | TexeT">
+<meta name="twitter:description" content="TexeT documentation: install the Python CLI with pip, set your OpenAI key, and learn every command and keyboard shortcut for voice typing, translation, fixes.">
+<meta name="twitter:image" content="https://ig-ongit.github.io/TexeT/assets/github.png">
+<link rel="icon" type="image/svg+xml" href="../assets/favicon.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/style.css">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "TechArticle", "headline": "TexeT documentation", "description": "TexeT documentation: install the Python CLI with pip, set your OpenAI key, and learn every command and keyboard shortcut for voice typing, translation, fixes.", "url": "https://ig-ongit.github.io/TexeT/docs/", "image": "https://ig-ongit.github.io/TexeT/assets/github.png", "inLanguage": "en", "author": {"@type": "Person", "name": "Irakli Gzirishvili", "jobTitle": "Full-Stack Software Engineer", "sameAs": ["https://github.com/IG-onGit", "https://www.linkedin.com/in/ig-link", "https://x.com/IG_onX", "https://www.linkedin.com/newsletters/creatron-7275978973124132864"]}}</script>
+</head>
+<body class="docs-page">
+<a class="skip" href="#main">Skip to content</a>
+<svg xmlns="http://www.w3.org/2000/svg" style="display:none" aria-hidden="true"><symbol id="i-menu" viewBox="0 0 24 24"><path d="M4 6h16M4 12h16M4 18h16"/></symbol><symbol id="i-x" viewBox="0 0 24 24"><path d="M18 6 6 18M6 6l12 12"/></symbol><symbol id="i-copy" viewBox="0 0 24 24"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></symbol><symbol id="i-check" viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></symbol><symbol id="i-chevron" viewBox="0 0 24 24"><path d="m6 9 6 6 6-6"/></symbol><symbol id="i-arrow" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></symbol><symbol id="i-github" viewBox="0 0 24 24"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.4 5.4 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"/><path d="M9 18c-4.51 2-5-2-7-2"/></symbol><symbol id="i-book" viewBox="0 0 24 24"><path d="M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H20v20H6.5a2.5 2.5 0 0 1 0-5H20"/></symbol><symbol id="i-download" viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M7 10l5 5 5-5M12 15V3"/></symbol><symbol id="i-user" viewBox="0 0 24 24"><path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></symbol><symbol id="i-scale" viewBox="0 0 24 24"><path d="m16 16 3-8 3 8c-.87.65-1.92 1-3 1s-2.13-.35-3-1ZM2 16l3-8 3 8c-.87.65-1.92 1-3 1s-2.13-.35-3-1ZM7 21h10M12 3v18M3 7h2c2 0 5-1 7-2 2 1 5 2 7 2h2"/></symbol><symbol id="i-cpu" viewBox="0 0 24 24"><rect x="4" y="4" width="16" height="16" rx="2"/><rect x="9" y="9" width="6" height="6"/><path d="M15 2v2M15 20v2M2 15h2M2 9h2M20 15h2M20 9h2M9 2v2M9 20v2"/></symbol><symbol id="i-folder" viewBox="0 0 24 24"><path d="M20 20a2 2 0 0 0 2-2V8a2 2 0 0 0-2-2h-7.9a2 2 0 0 1-1.69-.9L9.6 3.9A2 2 0 0 0 7.93 3H4a2 2 0 0 0-2 2v13a2 2 0 0 0 2 2Z"/></symbol><symbol id="i-compass" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="m16.24 7.76-1.8 5.41a2 2 0 0 1-1.27 1.27L7.76 16.24l1.8-5.41a2 2 0 0 1 1.27-1.27Z"/></symbol><symbol id="i-terminal" viewBox="0 0 24 24"><path d="m4 17 6-6-6-6M12 19h8"/></symbol><symbol id="i-linkedin" viewBox="0 0 24 24"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect width="4" height="12" x="2" y="9"/><circle cx="4" cy="4" r="2"/></symbol><symbol id="i-twitter-x" viewBox="0 0 24 24"><path d="M4 4l11.7 16H20L8.3 4z"/><path d="M4 20l6.8-6.8M13.2 10.8 20 4"/></symbol><symbol id="i-globe" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15 15 0 0 1 4 10 15 15 0 0 1-4 10 15 15 0 0 1-4-10 15 15 0 0 1 4-10z"/></symbol><symbol id="i-volume" viewBox="0 0 24 24"><path d="M11 5 6 9H2v6h4l5 4V5z"/><path d="M15.5 8.5a5 5 0 0 1 0 7M19 5a10 10 0 0 1 0 14"/></symbol><symbol id="i-mic" viewBox="0 0 24 24"><rect x="9" y="2" width="6" height="12" rx="3"/><path d="M19 10v2a7 7 0 0 1-14 0v-2M12 19v3"/></symbol><symbol id="i-sparkles" viewBox="0 0 24 24"><path d="m12 3 1.9 5.1L19 10l-5.1 1.9L12 17l-1.9-5.1L5 10l5.1-1.9z"/><path d="M19 17v4M17 19h4"/></symbol><symbol id="i-code" viewBox="0 0 24 24"><path d="m16 18 6-6-6-6M8 6l-6 6 6 6"/></symbol><symbol id="i-message" viewBox="0 0 24 24"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></symbol><symbol id="i-keyboard" viewBox="0 0 24 24"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M6 8h.01M10 8h.01M14 8h.01M18 8h.01M8 12h.01M12 12h.01M16 12h.01M7 16h10"/></symbol><symbol id="i-lock" viewBox="0 0 24 24"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></symbol><symbol id="i-info" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4M12 8h.01"/></symbol><symbol id="i-alert" viewBox="0 0 24 24"><path d="M10.3 3.9 1.8 18a2 2 0 0 0 1.7 3h17a2 2 0 0 0 1.7-3L13.7 3.9a2 2 0 0 0-3.4 0zM12 9v4M12 17h.01"/></symbol></svg>
+<header class="site-header"><div class="container">
+<a class="brand" href="../"><img src="../assets/logo.svg" width="36" height="36" alt=""><b>Texe<span>T</span></b></a>
+<nav class="nav" id="site-nav" aria-label="Main"><a href="../#features">Features</a><a href="../#how">How it works</a><a href="../#usage">Usage</a><a href="../#faq">FAQ</a><a href="../docs/" aria-current="page">Docs</a><a class="btn btn-ghost btn-sm" href="https://github.com/IG-onGit/TexeT" rel="noopener"><svg class="icon" aria-hidden="true"><use href="#i-github"/></svg> GitHub</a></nav>
+<button class="burger" type="button" aria-controls="docs-nav" aria-expanded="false" aria-label="Open menu"><svg class="icon" aria-hidden="true"><use href="#i-menu"/></svg></button>
+</div></header>
+
+<div class="container docs">
+<aside class="sidebar" id="docs-nav" aria-label="Documentation sections"><p class="side-title">Getting started</p><a href="#general" data-section="general">General</a><a href="#how-it-works" data-section="how-it-works">How it works</a><a href="#installation" data-section="installation">Installation</a><a href="#configuration" data-section="configuration">Configuration</a><p class="side-title">Reference</p><a href="#commands" data-section="commands">Commands</a><a href="#shortcuts" data-section="shortcuts">Keyboard shortcuts</a><a href="#translation" data-section="translation">Translating text</a><p class="side-title">Project</p><a href="#requirements" data-section="requirements">System requirements</a><a href="#license" data-section="license">License</a><a href="#author" data-section="author">About the author</a><div class="mobile-only"><p class="side-title">More</p><a href="../">Back to home</a><a href="https://github.com/IG-onGit/TexeT" rel="noopener">GitHub</a></div></aside>
+<main id="main">
+<article class="doc-section" id="general"><h1>General</h1>
+<p>TexeT is a Python command-line application that gives you voice, AI and translation inside any editable text area. You start it once in a terminal, and it listens for keyboard shortcuts system-wide.</p>
+<p>It works by copying your selection, processing it, and pasting the result back, so you never leave the app you are typing in.</p>
+<h2>Why TexeT</h2>
+<ul><li><strong>Works in your own apps.</strong> It uses copy and paste, so any field where you can select and paste text works.</li>
+<li><strong>Voice in and out.</strong> Dictate text or code, and have selected text read aloud.</li>
+<li><strong>Translation by suffix.</strong> Add <code>/en</code> to your text and press a shortcut.</li>
+<li><strong>AI is optional.</strong> Fixing, code writing, versions and replies use your own OpenAI API key.</li>
+<li><strong>Free and open source.</strong> MIT licensed, installed with one pip command.</li></ul>
+<div class="callout"><svg class="icon" aria-hidden="true"><use href="#i-info"/></svg><p>Next: follow <a href="#installation" data-goto="installation">Installation</a>, then learn the <a href="#shortcuts" data-goto="shortcuts">keyboard shortcuts</a>.</p></div><div class="pager"><a class="btn btn-ghost next" href="#how-it-works" data-goto="how-it-works">How it works <svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></a></div></article>
+<article class="doc-section" id="how-it-works"><h1>How it works</h1>
+<p>When you run <code>texet start</code>, TexeT registers its keyboard shortcuts. Each shortcut runs one task:</p>
+<ol><li>You press a shortcut.</li><li>TexeT copies your selected text, or listens to your voice for the dictation shortcuts.</li>
+<li>It translates the text, reads it aloud, or sends it to OpenAI, depending on the shortcut.</li>
+<li>It pastes the result into the editable zone. Replies are copied to the clipboard instead.</li>
+<li>It plays a done or error sound when the task finishes.</li></ol>
+<pre><code data-lang="text" data-title="Data flow">texet start -&gt; shortcuts registered
+
+shortcut pressed
+  |-- copy selection  (or listen to your voice)
+  |-- translate | read aloud | OpenAI | parse
+  '-- paste result   (or copy it to the clipboard)</code></pre>
+<p>Reading aloud runs in its own process, which is why you can stop it or start a new reading at any time.</p><div class="pager"><a class="btn btn-ghost prev" href="#general" data-goto="general"><svg style="transform:scaleX(-1)" class="icon" aria-hidden="true"><use href="#i-arrow"/></svg> General</a><a class="btn btn-ghost next" href="#installation" data-goto="installation">Installation <svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></a></div></article>
+<article class="doc-section" id="installation"><h1>Installation</h1>
+<p>TexeT is published as a Python package.</p>
+<ol><li>Open CMD (or your terminal) and run the install command.</li><li>Restart your CMD.</li><li>Run <code>texet</code> to check that it is installed. It lists the available commands.</li></ol>
+<pre><code data-lang="bash" data-title="Terminal">pip install texet
+texet</code></pre>
+<h2>Start TexeT</h2>
+<pre><code data-lang="bash" data-title="Terminal">texet aikey   # optional: needed for the AI shortcuts
+texet start</code></pre>
+<div class="callout"><svg class="icon" aria-hidden="true"><use href="#i-info"/></svg><p>Keep the terminal window open while you use TexeT. Press <code>Ctrl+C</code> there to shut it down.</p></div><div class="pager"><a class="btn btn-ghost prev" href="#how-it-works" data-goto="how-it-works"><svg style="transform:scaleX(-1)" class="icon" aria-hidden="true"><use href="#i-arrow"/></svg> How it works</a><a class="btn btn-ghost next" href="#configuration" data-goto="configuration">Configuration <svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></a></div></article>
+<article class="doc-section" id="configuration"><h1>Configuration</h1>
+<p>TexeT has very little to configure. These are the settings that exist today:</p>
+<div class="table-wrap"><table><thead><tr><th scope="col">Setting</th><th scope="col">How to change it</th><th scope="col">Default</th></tr></thead><tbody><tr><td>OpenAI API key</td><td><code>texet aikey</code></td><td>Not set. The AI shortcuts need it.</td></tr><tr><td>Remove the key</td><td><code>texet aikey -r</code></td><td>-</td></tr><tr><td>Key location</td><td>A file in the <code>.texet</code> folder of your home directory</td><td>Created when TexeT runs</td></tr><tr><td>Translation language</td><td>Add a code such as <code>/en</code> to the end of your text</td><td>None. A valid code is required.</td></tr><tr><td>AI model</td><td>Set in the source code</td><td><code>gpt-4o</code></td></tr><tr><td>Shortcuts</td><td>Set in the source code</td><td>See Keyboard shortcuts</td></tr></tbody></table></div>
+<div class="callout warn"><svg class="icon" aria-hidden="true"><use href="#i-alert"/></svg><p>Your API key is saved as a file on your computer. Keep your home folder private, and run <code>texet aikey -r</code> to delete it.</p></div><div class="pager"><a class="btn btn-ghost prev" href="#installation" data-goto="installation"><svg style="transform:scaleX(-1)" class="icon" aria-hidden="true"><use href="#i-arrow"/></svg> Installation</a><a class="btn btn-ghost next" href="#commands" data-goto="commands">Commands <svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></a></div></article>
+<article class="doc-section" id="commands"><h1>Commands</h1>
+<p>Run these in your terminal after installing.</p>
+<div class="table-wrap"><table><thead><tr><th scope="col">Command</th><th scope="col">What it does</th></tr></thead><tbody><tr><td><code>texet</code></td><td>List the available commands.</td></tr><tr><td><code>texet start</code></td><td>Start the system and register the keyboard shortcuts.</td></tr><tr><td><code>texet aikey</code></td><td>Set your OpenAI API key. It asks you to enter it.</td></tr><tr><td><code>texet aikey -r</code></td><td>Remove the stored OpenAI API key.</td></tr></tbody></table></div>
+<pre><code data-lang="bash" data-title="Terminal">texet
+texet start
+texet aikey
+texet aikey -r</code></pre><div class="pager"><a class="btn btn-ghost prev" href="#configuration" data-goto="configuration"><svg style="transform:scaleX(-1)" class="icon" aria-hidden="true"><use href="#i-arrow"/></svg> Configuration</a><a class="btn btn-ghost next" href="#shortcuts" data-goto="shortcuts">Keyboard shortcuts <svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></a></div></article>
+<article class="doc-section" id="shortcuts"><h1>Keyboard shortcuts</h1>
+<p>Start TexeT with <code>texet start</code>, then use these shortcuts in any editable text area.</p>
+<div class="table-wrap"><table><thead><tr><th scope="col">Shortcut</th><th scope="col">Action</th></tr></thead><tbody><tr><td><code>Ctrl + Alt + T</code></td><td>Translate the selected editable text. Add a language code such as <code>/en</code> to the end first.</td></tr><tr><td><code>Ctrl + Alt + R</code></td><td>Read the selected text aloud.</td></tr><tr><td><code>Ctrl + Shift + Alt + R</code></td><td>Stop reading the selected text aloud.</td></tr><tr><td><code>Ctrl + Alt + W</code></td><td>Listen and write the text in the editable zone.</td></tr><tr><td><code>Ctrl + Shift + Alt + W</code></td><td>Listen and write grammar-corrected text. Needs an OpenAI key.</td></tr><tr><td><code>Ctrl + Alt + P</code></td><td>Parse the selected text for unusual characters.</td></tr><tr><td><code>Ctrl + Alt + C</code></td><td>Listen and write the code in the editable zone. Needs an OpenAI key.</td></tr><tr><td><code>Ctrl + Alt + F</code></td><td>Fix the selected text with grammar. Needs an OpenAI key.</td></tr><tr><td><code>Ctrl + Shift + Alt + F</code></td><td>Fix the selected code. Start comments with <code>&gt;&gt;</code> to base the fix on them. Needs an OpenAI key.</td></tr><tr><td><code>Ctrl + Alt + V</code></td><td>Add versions of the selected content. Needs an OpenAI key.</td></tr><tr><td><code>Ctrl + Alt + A</code></td><td>Generate a reply to the selected message, then press Ctrl+V to paste it. Needs an OpenAI key.</td></tr><tr><td><code>Ctrl + C</code></td><td>Shut the TexeT system down (in the terminal where it runs).</td></tr></tbody></table></div>
+<h2>Fixing code with comments</h2>
+<p>If the selected code contains comments that begin with <code>&gt;&gt;</code>, TexeT implements the logic they describe and removes those comments. Without them, you say aloud what needs to be fixed.</p>
+<pre><code data-lang="py" data-title="Select this, then press Ctrl+Shift+Alt+F">def total(items):
+    # &gt;&gt; return the sum of the prices
+    pass</code></pre><div class="pager"><a class="btn btn-ghost prev" href="#commands" data-goto="commands"><svg style="transform:scaleX(-1)" class="icon" aria-hidden="true"><use href="#i-arrow"/></svg> Commands</a><a class="btn btn-ghost next" href="#translation" data-goto="translation">Translating text <svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></a></div></article>
+<article class="doc-section" id="translation"><h1>Translating text</h1>
+<p>TexeT reads the language from the end of your text. Write your text, add a slash and a language code, select everything, and press <code>Ctrl + Alt + T</code>. The translation replaces the selection.</p>
+<pre><code data-lang="text" data-title="Example">Hola, ¿cómo estás?/en</code></pre>
+<p>If the code is missing or unknown, TexeT asks you to specify a language by adding something like <code>/en</code> to the end of the text.</p>
+<h2>Supported language codes</h2>
+<div class="codes"><code>af</code><code>sq</code><code>am</code><code>ar</code><code>hy</code><code>az</code><code>eu</code><code>be</code><code>bn</code><code>bs</code><code>bg</code><code>ca</code><code>ceb</code><code>ny</code><code>zh-cn</code><code>zh-tw</code><code>co</code><code>hr</code><code>cs</code><code>da</code><code>nl</code><code>en</code><code>eo</code><code>et</code><code>tl</code><code>fi</code><code>fr</code><code>fy</code><code>gl</code><code>ka</code><code>de</code><code>el</code><code>gu</code><code>ht</code><code>ha</code><code>haw</code><code>iw</code><code>hi</code><code>hmn</code><code>hu</code><code>is</code><code>ig</code><code>id</code><code>ga</code><code>it</code><code>ja</code><code>jw</code><code>kn</code><code>kk</code><code>km</code><code>ko</code><code>ku</code><code>ky</code><code>lo</code><code>la</code><code>lv</code><code>lt</code><code>lb</code><code>mk</code><code>mg</code><code>ms</code><code>ml</code><code>mt</code><code>mi</code><code>mr</code><code>mn</code><code>my</code><code>ne</code><code>no</code><code>ps</code><code>fa</code><code>pl</code><code>pt</code><code>pa</code><code>ro</code><code>ru</code><code>sm</code><code>gd</code><code>sr</code><code>st</code><code>sn</code><code>sd</code><code>si</code><code>sk</code><code>sl</code><code>so</code><code>es</code><code>su</code><code>sw</code><code>sv</code><code>tg</code><code>ta</code><code>te</code><code>th</code><code>tr</code><code>uk</code><code>ur</code><code>ug</code><code>uz</code><code>vi</code><code>cy</code><code>xh</code><code>yi</code><code>yo</code><code>zu</code></div><div class="pager"><a class="btn btn-ghost prev" href="#shortcuts" data-goto="shortcuts"><svg style="transform:scaleX(-1)" class="icon" aria-hidden="true"><use href="#i-arrow"/></svg> Keyboard shortcuts</a><a class="btn btn-ghost next" href="#requirements" data-goto="requirements">System requirements <svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></a></div></article>
+<article class="doc-section" id="requirements"><h1>System requirements</h1>
+<h2>To run TexeT</h2>
+<ul><li>Python 3 with pip</li><li>A keyboard, and a microphone for the dictation shortcuts</li>
+<li>An OpenAI API key for the AI shortcuts</li><li>An internet connection for translation and AI requests</li></ul>
+<h2>To build from source</h2>
+<p>The source lives in the <code>.system</code> folder of the <a href="https://github.com/IG-onGit/TexeT" rel="noopener">repository</a>. It imports these Python packages:</p>
+<div class="table-wrap"><table><thead><tr><th scope="col">Package</th><th scope="col">Used for</th></tr></thead><tbody><tr><td><code>clight</code></td><td>Command-line framework</td></tr><tr><td><code>keyboard</code></td><td>Keyboard shortcuts and pasting</td></tr><tr><td><code>pyautogui</code></td><td>Copying the selection</td></tr><tr><td><code>pyperclip</code></td><td>Clipboard access</td></tr><tr><td><code>googletrans</code></td><td>Translation</td></tr><tr><td><code>pyttsx3</code></td><td>Reading text aloud</td></tr><tr><td><code>openai</code></td><td>AI shortcuts</td></tr></tbody></table></div><div class="pager"><a class="btn btn-ghost prev" href="#translation" data-goto="translation"><svg style="transform:scaleX(-1)" class="icon" aria-hidden="true"><use href="#i-arrow"/></svg> Translating text</a><a class="btn btn-ghost next" href="#license" data-goto="license">License <svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></a></div></article>
+<article class="doc-section" id="license"><h1>License</h1>
+<p>TexeT uses the MIT License. You may use, copy, modify, merge, publish, distribute, sublicense and sell it for free, as long as you keep the copyright and permission notice. It comes as is, with no warranty.</p>
+<pre class="license-box" tabindex="0" role="region" aria-label="Full license text">MIT License
+
+Copyright (c) 2025 Irakli Gzirishvili
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.</pre>
+<a class="btn btn-ghost" href="https://github.com/IG-onGit/TexeT/blob/main/LICENSE" rel="noopener"><svg class="icon" aria-hidden="true"><use href="#i-github"/></svg> View LICENSE on GitHub</a><div class="pager"><a class="btn btn-ghost prev" href="#requirements" data-goto="requirements"><svg style="transform:scaleX(-1)" class="icon" aria-hidden="true"><use href="#i-arrow"/></svg> System requirements</a><a class="btn btn-ghost next" href="#author" data-goto="author">About the author <svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></a></div></article>
+<article class="doc-section" id="author"><h1>About the author</h1>
+<div class="author-card"><img src="../assets/Irakli%20Gzirishvili.png" width="112" height="112" alt="Irakli Gzirishvili" loading="lazy"><div><h3>Irakli Gzirishvili <span style="color: var(--muted);font-weight: normal;">- From Georgia</span></h3><p>• AI & Cloud Engineer<br>• AI Integration Manager<br>• Full-Stack Software Engineer<br>• MIT OSS Provider<br>• DevOps Engineer</p></div></div>
+<div class="links">
+<a class="btn btn-ghost" href="https://github.com/IG-onGit" rel="me noopener"><svg class="icon" aria-hidden="true"><use href="#i-github"/></svg> github.com/IG-onGit</a>
+<a class="btn btn-ghost" href="https://www.linkedin.com/in/ig-link" rel="me noopener"><svg class="icon" aria-hidden="true"><use href="#i-linkedin"/></svg> LinkedIn</a>
+<a class="btn btn-ghost" href="https://x.com/IG_onX" rel="me noopener"><svg class="icon" aria-hidden="true"><use href="#i-twitter-x"/></svg> X</a>
+<a class="btn btn-ghost" href="https://www.linkedin.com/newsletters/creatron-7275978973124132864" rel="noopener"><svg class="icon" aria-hidden="true"><use href="#i-book"/></svg> CreaTron newsletter</a></div><div class="pager"><a class="btn btn-ghost prev" href="#license" data-goto="license"><svg style="transform:scaleX(-1)" class="icon" aria-hidden="true"><use href="#i-arrow"/></svg> License</a></div></article>
+</main>
+</div>
+<footer class="site-footer"><div class="container">
+<p>Copyright (c) 2025 Irakli Gzirishvili. Released under the MIT License.</p>
+<nav aria-label="Footer"><a href="../docs/">Documentation</a><a href="../docs/#requirements">Requirements</a><a href="../docs/#license">License</a><a href="https://github.com/IG-onGit/TexeT" rel="noopener">GitHub</a></nav>
+</div></footer>
+
+<script src="../assets/main.js" defer></script>
+</body>
+</html>

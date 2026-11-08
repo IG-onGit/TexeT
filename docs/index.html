@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Voice, AI &amp; Translation Shortcuts for Any App | TexeT</title>
+<meta name="description" content="TexeT is a free Python CLI that adds voice typing, translation, text-to-speech and AI fixes to any text field with keyboard shortcuts. Install with pip.">
+<meta name="keywords" content="TexeT, Python CLI, keyboard shortcuts, voice typing, text to speech, translate text, grammar fixer, OpenAI, pip install texet, productivity tool, open source">
+<meta name="author" content="Irakli Gzirishvili">
+<meta name="robots" content="index, follow, max-image-preview:large">
+<meta name="theme-color" content="#071420">
+<link rel="canonical" href="https://ig-ongit.github.io/TexeT/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="TexeT">
+<meta property="og:title" content="Voice, AI &amp; Translation Shortcuts for Any App | TexeT">
+<meta property="og:description" content="TexeT is a free Python CLI that adds voice typing, translation, text-to-speech and AI fixes to any text field with keyboard shortcuts. Install with pip.">
+<meta property="og:url" content="https://ig-ongit.github.io/TexeT/">
+<meta property="og:image" content="https://ig-ongit.github.io/TexeT/assets/github.png">
+<meta property="og:image:width" content="1280">
+<meta property="og:image:height" content="640">
+<meta property="og:image:alt" content="TexeT: Voice, AI and translation on keyboard shortcuts">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Voice, AI &amp; Translation Shortcuts for Any App | TexeT">
+<meta name="twitter:description" content="TexeT is a free Python CLI that adds voice typing, translation, text-to-speech and AI fixes to any text field with keyboard shortcuts. Install with pip.">
+<meta name="twitter:image" content="https://ig-ongit.github.io/TexeT/assets/github.png">
+<link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/style.css">
+<script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "SoftwareApplication", "name": "TexeT", "operatingSystem": "OS Independent", "applicationCategory": "UtilitiesApplication", "description": "TexeT is a free Python CLI that adds voice typing, translation, text-to-speech and AI fixes to any text field with keyboard shortcuts. Install with pip.", "url": "https://ig-ongit.github.io/TexeT/", "image": "https://ig-ongit.github.io/TexeT/assets/github.png", "license": "https://github.com/IG-onGit/TexeT/blob/main/LICENSE", "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"}, "author": {"@type": "Person", "name": "Irakli Gzirishvili", "url": "https://github.com/IG-onGit"}}, {"@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Is TexeT free?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. TexeT is open source under the MIT License, so you can use, copy and modify it for free. The AI shortcuts send requests to OpenAI with your own API key, and OpenAI bills that usage under its own terms."}}, {"@type": "Question", "name": "Do I need an OpenAI API key?", "acceptedAnswer": {"@type": "Answer", "text": "Only for the AI shortcuts: fixing text and code, grammar-corrected dictation, writing code, adding versions and generating replies. Translating, reading aloud, dictating and parsing unusual characters work without a key."}}, {"@type": "Question", "name": "Where is my API key stored?", "acceptedAnswer": {"@type": "Answer", "text": "When you run texet aikey, TexeT writes the key to a file in a .texet folder inside your home directory. Run texet aikey -r to remove it."}}, {"@type": "Question", "name": "Which apps and systems does it work with?", "acceptedAnswer": {"@type": "Answer", "text": "TexeT is a Python command-line app marked as OS independent. It copies your selection and pastes the result with keyboard shortcuts, so it works wherever you can select and paste text."}}]}]}</script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<svg xmlns="http://www.w3.org/2000/svg" style="display:none" aria-hidden="true"><symbol id="i-menu" viewBox="0 0 24 24"><path d="M4 6h16M4 12h16M4 18h16"/></symbol><symbol id="i-x" viewBox="0 0 24 24"><path d="M18 6 6 18M6 6l12 12"/></symbol><symbol id="i-copy" viewBox="0 0 24 24"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></symbol><symbol id="i-check" viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></symbol><symbol id="i-chevron" viewBox="0 0 24 24"><path d="m6 9 6 6 6-6"/></symbol><symbol id="i-arrow" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></symbol><symbol id="i-github" viewBox="0 0 24 24"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.4 5.4 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"/><path d="M9 18c-4.51 2-5-2-7-2"/></symbol><symbol id="i-book" viewBox="0 0 24 24"><path d="M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H20v20H6.5a2.5 2.5 0 0 1 0-5H20"/></symbol><symbol id="i-download" viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M7 10l5 5 5-5M12 15V3"/></symbol><symbol id="i-user" viewBox="0 0 24 24"><path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></symbol><symbol id="i-scale" viewBox="0 0 24 24"><path d="m16 16 3-8 3 8c-.87.65-1.92 1-3 1s-2.13-.35-3-1ZM2 16l3-8 3 8c-.87.65-1.92 1-3 1s-2.13-.35-3-1ZM7 21h10M12 3v18M3 7h2c2 0 5-1 7-2 2 1 5 2 7 2h2"/></symbol><symbol id="i-cpu" viewBox="0 0 24 24"><rect x="4" y="4" width="16" height="16" rx="2"/><rect x="9" y="9" width="6" height="6"/><path d="M15 2v2M15 20v2M2 15h2M2 9h2M20 15h2M20 9h2M9 2v2M9 20v2"/></symbol><symbol id="i-folder" viewBox="0 0 24 24"><path d="M20 20a2 2 0 0 0 2-2V8a2 2 0 0 0-2-2h-7.9a2 2 0 0 1-1.69-.9L9.6 3.9A2 2 0 0 0 7.93 3H4a2 2 0 0 0-2 2v13a2 2 0 0 0 2 2Z"/></symbol><symbol id="i-compass" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="m16.24 7.76-1.8 5.41a2 2 0 0 1-1.27 1.27L7.76 16.24l1.8-5.41a2 2 0 0 1 1.27-1.27Z"/></symbol><symbol id="i-terminal" viewBox="0 0 24 24"><path d="m4 17 6-6-6-6M12 19h8"/></symbol><symbol id="i-linkedin" viewBox="0 0 24 24"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect width="4" height="12" x="2" y="9"/><circle cx="4" cy="4" r="2"/></symbol><symbol id="i-twitter-x" viewBox="0 0 24 24"><path d="M4 4l11.7 16H20L8.3 4z"/><path d="M4 20l6.8-6.8M13.2 10.8 20 4"/></symbol><symbol id="i-globe" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15 15 0 0 1 4 10 15 15 0 0 1-4 10 15 15 0 0 1-4-10 15 15 0 0 1 4-10z"/></symbol><symbol id="i-volume" viewBox="0 0 24 24"><path d="M11 5 6 9H2v6h4l5 4V5z"/><path d="M15.5 8.5a5 5 0 0 1 0 7M19 5a10 10 0 0 1 0 14"/></symbol><symbol id="i-mic" viewBox="0 0 24 24"><rect x="9" y="2" width="6" height="12" rx="3"/><path d="M19 10v2a7 7 0 0 1-14 0v-2M12 19v3"/></symbol><symbol id="i-sparkles" viewBox="0 0 24 24"><path d="m12 3 1.9 5.1L19 10l-5.1 1.9L12 17l-1.9-5.1L5 10l5.1-1.9z"/><path d="M19 17v4M17 19h4"/></symbol><symbol id="i-code" viewBox="0 0 24 24"><path d="m16 18 6-6-6-6M8 6l-6 6 6 6"/></symbol><symbol id="i-message" viewBox="0 0 24 24"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></symbol><symbol id="i-keyboard" viewBox="0 0 24 24"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M6 8h.01M10 8h.01M14 8h.01M18 8h.01M8 12h.01M12 12h.01M16 12h.01M7 16h10"/></symbol><symbol id="i-lock" viewBox="0 0 24 24"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></symbol><symbol id="i-info" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4M12 8h.01"/></symbol><symbol id="i-alert" viewBox="0 0 24 24"><path d="M10.3 3.9 1.8 18a2 2 0 0 0 1.7 3h17a2 2 0 0 0 1.7-3L13.7 3.9a2 2 0 0 0-3.4 0zM12 9v4M12 17h.01"/></symbol></svg>
+<header class="site-header"><div class="container">
+<a class="brand" href="./"><img src="assets/logo.svg" width="36" height="36" alt=""><b>Texe<span>T</span></b></a>
+<nav class="nav" id="site-nav" aria-label="Main"><a href="#features">Features</a><a href="#how">How it works</a><a href="#usage">Usage</a><a href="#faq">FAQ</a><a href="docs/">Docs</a><a class="btn btn-ghost btn-sm" href="https://github.com/IG-onGit/TexeT" rel="noopener"><svg class="icon" aria-hidden="true"><use href="#i-github"/></svg> GitHub</a></nav>
+<button class="burger" type="button" aria-controls="site-nav" aria-expanded="false" aria-label="Open menu"><svg class="icon" aria-hidden="true"><use href="#i-menu"/></svg></button>
+</div></header>
+
+<main id="main">
+<section class="hero"><div class="container">
+<div>
+<div class="badges"><span class="badge mit"><svg class="icon" aria-hidden="true"><use href="#i-scale"/></svg> MIT License</span><span class="badge"><i class="dot"></i>OS Independent</span><span class="badge"><svg class="icon" aria-hidden="true"><use href="#i-terminal"/></svg> Python CLI</span></div>
+<h1>Write, fix and translate text anywhere <span class="grad">with one shortcut</span></h1>
+<p class="lead">TexeT is a Python command-line tool that adds voice, AI and translation to any editable text area. Select text or speak, press a shortcut, and the result is pasted for you.</p>
+<a class="author-pill" href="docs/#author"><img src="assets/Irakli%20Gzirishvili.png" width="52" height="52" alt="Irakli Gzirishvili"><span><small>Created by</small><strong>Irakli Gzirishvili</strong><span>Full-Stack Software Engineer • MIT OSS Provider</span></span></a>
+<div class="cta-row"><a class="btn btn-primary" href="docs/#installation"><svg class="icon" aria-hidden="true"><use href="#i-download"/></svg> Install with pip</a><a class="btn btn-ghost" href="docs/"><svg class="icon" aria-hidden="true"><use href="#i-book"/></svg> Read the docs</a></div>
+<ul class="trust"><li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg> Free and open source</li><li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg> Works wherever you can paste text</li></ul>
+</div>
+<div class="mock" aria-hidden="true">
+<div class="term"><pre><span class="ln" style="--d:0"><span class="p">$</span> texet start</span><span class="ln" style="--d:1"><span class="m">Press [ctrl+alt+t] to translate the selected editable text</span></span><span class="ln" style="--d:2"><span class="m">Press [ctrl+alt+r] to read the selected text aloud</span></span><span class="ln" style="--d:3"><span class="m">Press [ctrl+alt+w] to listen and transcribe the text</span></span><span class="ln" style="--d:4"><span class="m">Press [ctrl+alt+f] to fix the selected text</span></span><span class="ln" style="--d:5"><span class="k">Press [ctrl+c] to shut TexeT down</span></span></pre></div>
+<div class="note"><small>Selected text, then Ctrl+Alt+T</small>Hola, ¿cómo estás?/en<br><b>Hello, how are you?</b></div>
+</div>
+</div></section>
+
+<section class="block alt" id="features"><div class="container">
+<span class="eyebrow">Features</span><h2>Eleven shortcuts for the text you write every day</h2>
+<p class="intro">Reading, writing, translating and fixing text are one key combination away. The AI shortcuts use your own OpenAI API key.</p>
+<div class="grid3"><article class="card"><div class="tile"><svg class="icon" aria-hidden="true"><use href="#i-globe"/></svg></div><h3>Translate in place</h3><p>Add a language code such as /en to the end of your text and press Ctrl+Alt+T. The translation replaces it, with 100+ language codes supported.</p></article><article class="card"><div class="tile"><svg class="icon" aria-hidden="true"><use href="#i-volume"/></svg></div><h3>Read text aloud</h3><p>Select text and press Ctrl+Alt+R to hear it. Stop the reading or start a new one whenever you need.</p></article><article class="card"><div class="tile"><svg class="icon" aria-hidden="true"><use href="#i-mic"/></svg></div><h3>Dictate anywhere</h3><p>Press Ctrl+Alt+W and speak. TexeT types your words into the editable field, or fixes the grammar first with the Shift variant.</p></article><article class="card"><div class="tile"><svg class="icon" aria-hidden="true"><use href="#i-sparkles"/></svg></div><h3>Fix text and code</h3><p>Fix the grammar of selected text, or select code and say what to change. Leave >> comments in code and TexeT implements them.</p></article><article class="card"><div class="tile"><svg class="icon" aria-hidden="true"><use href="#i-code"/></svg></div><h3>Write code by voice</h3><p>Describe the function you need, and TexeT writes the code and pastes it into your editor.</p></article><article class="card"><div class="tile"><svg class="icon" aria-hidden="true"><use href="#i-message"/></svg></div><h3>Replies, versions, clean-up</h3><p>Generate a reply to a message, add up to four more versions of your text, or swap unusual characters for plain ones.</p></article></div>
+</div></section>
+
+<section class="block" id="how"><div class="container">
+<span class="eyebrow">How it works</span><h2>Start it once, then use it everywhere</h2>
+<p class="intro">TexeT runs in a terminal window and listens for its shortcuts in the background.</p>
+<ol class="steps">
+<li><h3>Install and start</h3><p>Run <code>pip install texet</code>, then <code>texet start</code>. TexeT binds its keyboard shortcuts.</p></li>
+<li><h3>Select text or speak</h3><p>Highlight text in any editable field, or press a dictation shortcut and talk.</p></li>
+<li><h3>Get the result</h3><p>TexeT pastes the result in place. Replies are copied to your clipboard, so you press Ctrl+V.</p></li>
+</ol>
+</div></section>
+
+<section class="block alt" id="usage"><div class="container split">
+<div>
+<span class="eyebrow">Usage</span><h2>Three commands to get going</h2>
+<p class="intro" style="margin-bottom:20px">Add your OpenAI key if you want the AI shortcuts, start TexeT, and press the shortcuts in any app.</p>
+<ul class="checks"><li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg> Translate by adding /en to the end of your text</li><li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg> Dictate or write code by voice</li><li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg> Press Ctrl+C in the terminal to shut TexeT down</li></ul>
+<a class="btn btn-primary" href="docs/#shortcuts"><svg class="icon" aria-hidden="true"><use href="#i-keyboard"/></svg> See all shortcuts</a>
+</div>
+<div class="stack">
+<pre><code data-lang="bash" data-title="Terminal">pip install texet
+texet aikey
+texet start</code></pre>
+<pre><code data-lang="text" data-title="In any text field">Hola, ¿cómo estás?/en    &lt;- select it, press Ctrl+Alt+T</code></pre>
+</div>
+</div></section>
+
+<section class="block" id="faq"><div class="container">
+<span class="eyebrow">FAQ</span><h2>Questions before you install</h2>
+<div class="faq"><details open><summary>Is TexeT free?<svg class="icon" aria-hidden="true"><use href="#i-chevron"/></svg></summary><p>Yes. TexeT is open source under the MIT License, so you can use, copy and modify it for free. The AI shortcuts send requests to OpenAI with your own API key, and OpenAI bills that usage under its own terms.</p></details><details><summary>Do I need an OpenAI API key?<svg class="icon" aria-hidden="true"><use href="#i-chevron"/></svg></summary><p>Only for the AI shortcuts: fixing text and code, grammar-corrected dictation, writing code, adding versions and generating replies. Translating, reading aloud, dictating and parsing unusual characters work without a key.</p></details><details><summary>Where is my API key stored?<svg class="icon" aria-hidden="true"><use href="#i-chevron"/></svg></summary><p>When you run texet aikey, TexeT writes the key to a file in a .texet folder inside your home directory. Run texet aikey -r to remove it.</p></details><details><summary>Which apps and systems does it work with?<svg class="icon" aria-hidden="true"><use href="#i-chevron"/></svg></summary><p>TexeT is a Python command-line app marked as OS independent. It copies your selection and pastes the result with keyboard shortcuts, so it works wherever you can select and paste text.</p></details></div>
+</div></section>
+
+<section class="block" style="padding-top:0"><div class="container"><div class="cta-band">
+<h2>Add TexeT to your keyboard</h2>
+<p>Install it with pip, run texet start, and your shortcuts are ready.</p>
+<div class="cta-row"><a class="btn btn-primary" href="docs/#installation"><svg class="icon" aria-hidden="true"><use href="#i-download"/></svg> Get started</a><a class="btn btn-ghost" href="https://github.com/IG-onGit/TexeT" rel="noopener"><svg class="icon" aria-hidden="true"><use href="#i-github"/></svg> Star on GitHub</a></div>
+</div></div></section>
+</main>
+<footer class="site-footer"><div class="container">
+<p>Copyright (c) 2025 Irakli Gzirishvili. Released under the MIT License.</p>
+<nav aria-label="Footer"><a href="docs/">Documentation</a><a href="docs/#requirements">Requirements</a><a href="docs/#license">License</a><a href="https://github.com/IG-onGit/TexeT" rel="noopener">GitHub</a></nav>
+</div></footer>
+
+<script src="assets/main.js" defer></script>
+</body>
+</html>
